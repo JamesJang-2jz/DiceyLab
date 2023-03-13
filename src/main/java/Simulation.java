@@ -9,13 +9,11 @@ public class Simulation {
         Dice dice = new Dice();
         Bins bins = new Bins(dice.getNumberOfDice());
 
-
-        // roll die and add return to bins
-
-
+        // get number of die to roll
         dice.setNumberDice(input);
 
-
+        // roll die and add return to bins
+        dice.rollDie();
 
     }
 

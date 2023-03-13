@@ -4,7 +4,7 @@ public class Dice {
 
     public int rollTotal = 0;
     public int newRoll = 0;
-    public int numberOfDice = 0;
+    public static int numberOfDice = 0;
     public Dice(){
     }
     public void setNumberDice(int x){
@@ -13,9 +13,9 @@ public class Dice {
     public int getNumberOfDice(){
         return numberOfDice;
     }
-    public int rollDie(int rolls) {
+    public int rollDie() {
         Random roll = new Random();
-        for (int i = 1; i <= rolls; i++) {
+        for (int i = 1; i <= numberOfDice; i++) {
             newRoll = roll.nextInt(6) + 1;
                 rollTotal+= newRoll;
         }
