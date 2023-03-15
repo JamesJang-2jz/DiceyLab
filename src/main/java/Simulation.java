@@ -17,7 +17,15 @@ public class Simulation {
     public void printResults(){
         System.out.println("***\nSimulation of " + numberDice +
                 " dice tossed for " + numberTosses + " times. \n***");
-        System.out.println(bin.diceBin.get(7));
+        for (Map.Entry<Integer, Integer> result : bin.diceBin.entrySet()) {
+            double percent = (double)result.getValue()/numberTosses;
+            System.out.printf("%2d : %7d: %.2f ",result.getKey(), result.getValue(),percent);
+            System.out.print(" ");
+            for (int i = 0; i < percent * 100; i++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
     }
     public void setNumberDice(int input){
         numberDice = input;

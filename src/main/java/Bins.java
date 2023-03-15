@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class Bins {
@@ -9,7 +10,7 @@ public class Bins {
         this.numberDice = numberDice;
         this.numberTosses = numberTosses;
     }
-    // add rolled dice rolled number to array
+    // add rolled dice rolled number to map
     public void addToBins(int x) {
         if (diceBin.containsKey(x)){
             diceBin.put(x, diceBin.get(x) + 1);

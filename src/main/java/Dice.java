@@ -23,7 +23,6 @@ public class Dice {
                 sum += roll.nextInt(6) + 1;
             }
             bin.addToBins(sum);
-            System.out.println(sum);
         } return numDice;
     }
     public Integer getRollTotal() {
