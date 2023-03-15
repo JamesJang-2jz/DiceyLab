@@ -2,14 +2,12 @@ import java.util.Random;
 
 public class Dice {
     public int sumOfRoll = 0;
-    public int newRoll = 0;
     public int numberDice = 0;
     public int numberTosses;
-    Bins bin;
+    Bins bin = new Bins(numberDice,numberTosses);
     public Dice(int numberDice, int numberTosses) {
         this.numberDice = numberDice;
         this.numberTosses = numberTosses;
-        Bins bin = new Bins(numberDice,numberTosses);
     }
     public void setNumberDice(int x){
         numberDice = x;
@@ -17,14 +15,16 @@ public class Dice {
     public int getNumberOfDice(){
         return numberDice;
     }
-    public int tossAndSum(int dice) {
+    public int tossAndSum(int numDice, int numToss) {
         Random roll = new Random();
-        int rollTotal = 0;
-        for (int i = 1; i <= dice; i++) {
-            newRoll = roll.nextInt(6) + 1;
-                rollTotal+= newRoll;
-        } setRollTotal(rollTotal);
-        return rollTotal;
+        for (int i = 1; i <= numToss; i++) {
+            int sum  = 0;
+            for (int j = 1; j <= numDice; j++) {
+                sum += roll.nextInt(6) + 1;
+            }
+            bin.addToBins(sum);
+            System.out.println(sum);
+        } return numDice;
     }
     public Integer getRollTotal() {
         return sumOfRoll;
