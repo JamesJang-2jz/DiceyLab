@@ -6,21 +6,18 @@ public class Dice {
     public int numberDice = 0;
     public int numberTosses;
     Bins bin;
-
     public Dice(int numberDice, int numberTosses) {
         this.numberDice = numberDice;
         this.numberTosses = numberTosses;
         Bins bin = new Bins(numberDice,numberTosses);
     }
-    //
     public void setNumberDice(int x){
         numberDice = x;
     }
     public int getNumberOfDice(){
         return numberDice;
     }
-
-    public int rollDie(int dice) {
+    public int tossAndSum(int dice) {
         Random roll = new Random();
         int rollTotal = 0;
         for (int i = 1; i <= dice; i++) {
@@ -29,10 +26,6 @@ public class Dice {
         } setRollTotal(rollTotal);
         return rollTotal;
     }
-    public Integer tossAndSum(){
-        return null;
-    }
-
     public Integer getRollTotal() {
         return sumOfRoll;
     }

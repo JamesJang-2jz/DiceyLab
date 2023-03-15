@@ -33,9 +33,10 @@ public class Simulation {
             numberDice = Integer.parseInt(input);
             numberTosses = Integer.parseInt(input2);
         }
-    }
         Simulation sim = new Simulation(numberDice, numberTosses);
 
+
+    }
 
         // get number of die to roll
         public void setDice(Dice dice){
@@ -48,10 +49,7 @@ public class Simulation {
         /** set array to dice #
               bins.setArray();
 
-
         roll die and add return to bins
         dice.rollDie();
          */
-
-
 }

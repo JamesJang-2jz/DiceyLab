@@ -11,7 +11,7 @@ public class DiceTest {
         int numToss = 0;
         Dice dice  = new Dice(numDice, numToss);
         Integer numRolls = 10;
-        Integer expectedRoll = dice.rollDie(numRolls);
+        Integer expectedRoll = dice.tossAndSum(numRolls);
         Integer actualRoll = dice.getRollTotal();
         // When
         dice.setNumberDice(numDice);
