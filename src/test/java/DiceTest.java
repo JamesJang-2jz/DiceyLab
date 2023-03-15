@@ -7,14 +7,16 @@ public class DiceTest {
     @Test
     public void testDice() {
         // Given
-        Dice dice  = new Dice();
+        int numDice = 2;
+        int numToss = 0;
+        Dice dice  = new Dice(numDice, numToss);
         Integer numRolls = 10;
         Integer expectedRoll = dice.rollDie(numRolls);
+        Integer actualRoll = dice.getRollTotal();
         // When
-        Integer numberDice = 2;
-        dice.setNumberDice(numberDice);
+        dice.setNumberDice(numDice);
 
         // Then
-        Assert.assertEquals(expectedRoll, );
+        Assert.assertEquals(expectedRoll, actualRoll);
     }
 }

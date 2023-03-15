@@ -1,20 +1,21 @@
 import java.util.Map;
 
 public class Bins {
-    public int numberOfDice = 0;
+    public int numberDice = 0;
+    public int numberTosses = 0;
     public String[] binsAssorted;
     Map<Integer, Integer> diceBin;
 
-    public Bins(int numberDie) {
-        this.numberOfDice = numberDie;
+    public Bins(int numberDice, int numberTosses) {
+        this.numberDice = numberDice;
     }
     public void setArray() {
-        binsAssorted = new String[numberOfDice * 6];
+        binsAssorted = new String[numberDice * 6];
 
     }
     // add rolled dice rolled number to array
     public void addToBins(int x) {
-        for (int i = numberOfDice; i < numberOfDice * 6; i++) {
+        for (int i = numberDice; i < numberDice * 6; i++) {
 
 
         }
